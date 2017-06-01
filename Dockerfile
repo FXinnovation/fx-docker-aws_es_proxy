@@ -12,7 +12,7 @@ RUN /resources/build && rm -rf /resources
 
 USER "awsesproxy"
 
-ENTRYPOINT ["aws-es-proxy"]
+ENTRYPOINT ["entrypoint.sh"]
 
 LABEL "maintainer"="cloudsquad@fxinnovation.com" \
       "org.label-schema.name"="aws-es-proxy" \

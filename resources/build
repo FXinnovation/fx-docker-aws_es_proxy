@@ -13,3 +13,5 @@ adduser -D -H -G awsesproxy awsesproxy
 
 # Making sure aws-es-proxy is executable
 chmod +x /bin/aws-es-proxy
+
+mv /resource/entrypoint.sh /bin/entrypoint.sh
