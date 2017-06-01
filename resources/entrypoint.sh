@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Dirty fix
 export AWS_ACCESS_KEY_ID=$(echo $AWS_ACCESS_KEY_ID)
