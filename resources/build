@@ -1,0 +1,15 @@
+#!/bin/bash
+set -e -x
+
+# Installing su-exec for non root launching of jenkins
+apk add --no-cache curl
+
+# Downloading aws-es-proxu
+curl -L --retry 5 -o /bin/aws-es-proxy https://github.com/abutaha/aws-es-proxy/releases/download/v${AWSESPROXY_VERSION}/aws-es-proxy-${AWSESPROXY_VERSION}-linux-amd64
+
+# Creating user and group
+addgroup awsesproxy
+adduser -D -H -G awsesproxy awsesproxy
+
+# Making sure aws-es-proxy is executable
+chmod +x /bin/aws-es-proxy
